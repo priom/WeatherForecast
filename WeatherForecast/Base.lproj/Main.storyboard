@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherForecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpI-aO-foL">
+                                <rect key="frame" x="239" y="20" width="123" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="7LI-gv-uYe"/>
+                                    <constraint firstAttribute="width" constant="123" id="sns-i5-thT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-LP-0kG">
+                                <rect key="frame" x="242" y="84" width="117" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="2L2-yD-t2i"/>
+                                    <constraint firstAttribute="height" constant="21" id="bYy-Ff-Tjy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-7l-shr">
+                                <rect key="frame" x="239" y="132" width="123" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DvH-zl-gQu"/>
+                                    <constraint firstAttribute="width" constant="123" id="hv2-Kn-Qf7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4D9-6M-A7R">
+                                <rect key="frame" x="239" y="183" width="123" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="bit-V9-zhE"/>
+                                    <constraint firstAttribute="height" constant="30" id="gOf-of-DQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Show weather">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQA-2X-M9Y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-pI-KHP">
+                                <rect key="frame" x="114" y="236" width="372" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="dBD-ze-JE6"/>
+                                    <constraint firstAttribute="width" constant="372" id="g8Q-nG-Qya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="M8s-LP-0kG" firstAttribute="top" secondItem="cpI-aO-foL" secondAttribute="bottom" constant="27" id="0xl-Pf-pqJ"/>
+                            <constraint firstItem="ot9-pI-KHP" firstAttribute="top" secondItem="4D9-6M-A7R" secondAttribute="bottom" constant="23" id="2DO-L0-lLH"/>
+                            <constraint firstItem="4D9-6M-A7R" firstAttribute="top" secondItem="u2b-7l-shr" secondAttribute="bottom" constant="21" id="Dly-Kz-egv"/>
+                            <constraint firstItem="M8s-LP-0kG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gbr-CQ-m4h"/>
+                            <constraint firstItem="4D9-6M-A7R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7R-4T-pSO"/>
+                            <constraint firstItem="u2b-7l-shr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QYK-hB-Uc5"/>
+                            <constraint firstItem="u2b-7l-shr" firstAttribute="top" secondItem="M8s-LP-0kG" secondAttribute="bottom" constant="27" id="Vfk-CK-jzm"/>
+                            <constraint firstItem="cpI-aO-foL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="o0b-d3-Dge"/>
+                            <constraint firstItem="cpI-aO-foL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z5K-GF-mXp"/>
+                            <constraint firstItem="ot9-pI-KHP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zh4-b9-w14"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RUE-al-Qer"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="u2b-7l-shr" id="7Pq-ep-DNK"/>
+                        <outlet property="resultLabel" destination="ot9-pI-KHP" id="NIC-uq-YyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="367"/>
+        </scene>
+    </scenes>
+</document>
